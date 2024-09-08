@@ -1,26 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuma's URL to QR Converter</title>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-        }
-
-        .frame {
-            border: 1px solid black;
-            padding: 20px;
-        }
-
-        .textbox {
-            margin-bottom: 10px;
-        }
-
         .submit-btn {
             background-color: #007bff;
             color: white;
@@ -35,15 +20,23 @@
         <div class="frame">
             <img id="qr-code" src="" alt="QR Code">
         </div>
-        <input type="text" class="textbox" placeholder="Enter text">
-        <button class="submit-btn">Submit</button>
+        <input type="text" class="textbox" placeholder="Enter text" id="text-input">
+        <button class="submit-btn" id="generate-btn">Submit</button>
     </div>
 
     <script>
         document.getElementById('generate-btn').addEventListener('click', function() {
             const text = document.getElementById('text-input').value;
             const qrCodeImage = document.getElementById('qr-code');
-            QRCode.toDataURL(text, function (err, url) {
+            const options = {
+                width: 200,
+                margin: 2,
+                color: {
+                    dark: '#000000',  // QR code color
+                    light: '#ffffff'  // Background color
+                }
+            };
+            QRCode.toDataURL(text, options, function (err, url) {
                 if (err) console.error(err);
                 qrCodeImage.src = url;
             });
