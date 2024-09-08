@@ -1,11 +1,13 @@
 .header {
-    background-color: #393E46;
+    background-color: rgba(57, 62, 70, 0.8); /* Slightly transparent background */
     color: #F7F7F7;
     padding: 20px;
     text-align: left; /* Align text to the left */
     border-bottom: 2px solid #6D9886;
     width: 100%; /* Make header full width */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    font-family: 'Rubik', sans-serif; /* Apply Rubik font */
+    font-size: 12px;
 }
 
 .header h1 {
@@ -70,13 +72,13 @@ body {
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    margin-top: auto; /* Push to the bottom */
+    margin-top: 20px; /* Add spacing above the button */
     align-self: center; /* Center within the parent */
 }
 
 .textbox {
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 20px; /* Add spacing above the textbox */
     width: 100%;
     box-sizing: border-box;
     border: 1px solid #393E46;
@@ -85,6 +87,7 @@ body {
 }
 
 img {
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-bottom: 20px; /* Add spacing below the image */
     cursor: pointer;
 }
