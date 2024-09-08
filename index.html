@@ -1,7 +1,39 @@
 <!DOCTYPE html>
 <html>
+<head>
+    <title>Minimalist UI</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        .frame {
+            border: 1px solid black;
+            padding: 20px;
+        }
+
+        .textbox {
+            margin-bottom: 10px;
+        }
+
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
 <body>
-<h1>Kuma's URL to QR Converter</h1>
-<p>If you are seeing this, I'm still working on it.</p>
+    <div class="frame">
+        <input type="text" class="textbox" placeholder="Enter text">
+        <button class="submit-btn">Submit</button>
+    </div>
 </body>
 </html>
