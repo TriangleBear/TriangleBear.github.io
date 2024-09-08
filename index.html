@@ -5,14 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuma's URL to QR Converter</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script> <!-- Include QRCode library -->
+    <script src="scripts.js" defer></script>
 </head>
 <body>
-    <div class="frame">
-        <img id="qr-code" src="" alt="">
-        <input type="text" class="textbox" placeholder="Enter text" id="text-input">
-        <button class="submit-btn" id="generate-btn">Submit</button>
+    <div class="header">
+        <h1>TriangleBear</h1>
+        <p>No BS, Just Convert URL to QR Code.</p>
     </div>
-    <script src="script.js"></script>
+    <div class="container">
+        <div class="frame">
+            <img id="qr-code" src="" alt="">
+            <input type="text" class="textbox" placeholder="Enter URL" id="text-input">
+            <button class="submit-btn" id="generate-btn">Generate QR</button>
+        </div>
+    </div>  
 </body>
 </html>
