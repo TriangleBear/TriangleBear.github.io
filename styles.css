@@ -1,35 +1,89 @@
+.header {
+    background-color: #393E46;
+    color: #F7F7F7;
+    padding: 20px;
+    text-align: left; /* Align text to the left */
+    border-bottom: 2px solid #6D9886;
+    width: 100%; /* Make header full width */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+}
+
 body {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Stack elements vertically */
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background: linear-gradient(90deg, #393E46, #6D9886, #F2E7D5, #F7F7F7);
+    background-size: 400% 400%;
+    animation: gradient-animation 10s ease infinite;
 }
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+}
+
 .frame {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Center content vertically */
     padding: 20px;
-    background-color: white;
+    background-color: rgba(247, 247, 247, 0.8); /* Slightly transparent #F7F7F7 */
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px; /* Set width to 500px */
+    min-height: 500px; /* Set minimum height to 500px */
+    max-height: 80vh; /* Optional: set a max height */
+    overflow: auto; /* Allow scrolling if content overflows */
 }
+
 .submit-btn {
-    background-color: #007bff;
+    background-color: #6D9886;
     color: white;
     padding: 10px 20px;
     border: none;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: auto; /* Push to the bottom */
+    align-self: center; /* Center within the parent */
 }
+
 .textbox {
     padding: 10px;
     margin-top: 10px;
     width: 100%;
     box-sizing: border-box;
+    border: 1px solid #393E46;
+    background-color: #F2E7D5;
+    align-self: center; /* Center within the parent */
 }
+
 img {
     margin-top: 20px;
     cursor: pointer;
