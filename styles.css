@@ -7,7 +7,7 @@
     width: 100%; /* Make header full width */
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     font-family: 'Rubik', sans-serif; /* Apply Rubik font */
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .header h1 {
@@ -26,8 +26,8 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background: linear-gradient(90deg, #393E46, #6D9886, #F2E7D5, #F7F7F7);
-    background-size: 400% 400%;
+    background: linear-gradient(90deg, #393E46, #6D9886);
+    background-size: 200% 200%;
     animation: gradient-animation 10s ease infinite;
 }
 
